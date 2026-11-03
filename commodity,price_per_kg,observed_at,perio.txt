@@ -1,0 +1,21 @@
+commodity,price_per_kg,observed_at,period_type,region,source_name,source_url
+Beras Medium,13710,2026-09-01,harian,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13716,2026-09-02,harian,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13716,2026-09-03,harian,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13672,2026-11-03,harian,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13686,2026-09-07,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13658,2026-09-14,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13672,2026-09-21,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13636,2026-09-28,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13585,2026-10-05,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13639,2026-10-12,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13677,2026-10-19,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13669,2026-10-26,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13648,2026-11-02,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13672,2026-11-03,mingguan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13659,2026-09-01,bulanan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13646,2026-10-01,bulanan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13666,2026-11-02,bulanan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13659,2026-09-01,triwulan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13648,2026-10-01,triwulan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/
+Beras Medium,13652,2026-10-05,tahunan,Jawa Barat,Si Linda Jabar,https://silinda.jabarprov.go.id/

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgroSmart – Pertanian Cerdas</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🌱 AgroSmart</div>
+    <div id="session-label" class="muted">Belum masuk</div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">SMART AGRICULTURE PLATFORM</p>
+      <h1>Pertanian lebih terarah dengan data.</h1>
+      <p>Kelola catatan budidaya, lihat prakiraan cuaca, dan pantau harga pasar dari satu tempat.</p>
+    </section>
+
+    <section class="panel" id="auth-panel">
+      <h2>Akun AgroSmart</h2>
+      <div class="grid two">
+        <label>Email<input id="email" type="email" placeholder="nama@email.com" autocomplete="email"></label>
+        <label>Password<input id="password" type="password" placeholder="Minimal 6 karakter" autocomplete="current-password"></label>
+      </div>
+      <div class="actions">
+        <button id="signup-btn">Daftar</button>
+        <button id="login-btn" class="secondary">Masuk</button>
+        <button id="logout-btn" class="ghost" hidden>Keluar</button>
+      </div>
+      <p id="auth-message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="grid two">
+      <article class="panel">
+        <div class="section-heading"><h2>🌦️ Prakiraan Cuaca</h2><span class="tag">BMKG</span></div>
+        <p class="muted">Masukkan kode wilayah desa/kelurahan tingkat IV (adm4).</p>
+        <div class="inline">
+          <input id="adm4" placeholder="Contoh format: 32.11.01.2001">
+          <button id="weather-btn">Ambil prakiraan</button>
+        </div>
+        <div id="weather-result" class="result muted">Belum ada data cuaca.</div>
+        <small>Sumber: BMKG – Data Prakiraan Cuaca Terbuka.</small>
+      </article>
+
+
+<article class="panel">
+  <div class="section-heading">
+    <h2>💹 Harga Pasar</h2>
+    <span class="tag">Data Historis</span>
+  </div>
+
+  <h3>Grafik Riwayat Harga Jawa Barat</h3>
+
+  <label>
+    Komoditas grafik
+    <select id="history-commodity">
+      <option value="Beras Medium">Beras Medium</option>
+    </select>
+  </label>
+
+  <label>
+    Periode grafik
+    <select id="history-period">
+      <option value="harian">Harian</option>
+      <option value="mingguan">Mingguan</option>
+      <option value="bulanan">Bulanan</option>
+      <option value="triwulan">Triwulan</option>
+      <option value="tahunan">Tahunan</option>
+    </select>
+  </label>
+
+  <div id="price-history-result" class="result muted">
+    Grafik riwayat harga akan ditampilkan di sini.
+  </div>
+
+  <div class="chart-container">
+    <canvas id="price-history-chart"></canvas>
+  </div>
+
+  <small>
+    Sumber: Si Linda Jabar. Data historis yang tersedia di AgroSmart.
+  </small>
+</article>
+
+    <section class="panel">
+      <div class="section-heading"><h2>🧑‍🌾 Catatan Lahan & Budidaya</h2><span class="tag">Perlu login</span></div>
+      <div class="grid two">
+        <label>Nama lahan<input id="farm-name" placeholder="Contoh: Lahan Utara"></label>
+        <label>Komoditas tanaman<input id="plant-name" placeholder="Contoh: Padi"></label>
+        <label>Luas lahan (m²)<input id="area" type="number" min="0" step="0.1" placeholder="1000"></label>
+        <label>Tanggal tanam<input id="planting-date" type="date"></label>
+      </div>
+      <label>Catatan<textarea id="farm-notes" rows="3" placeholder="Varietas, kondisi tanaman, pemupukan, dan sebagainya"></textarea></label>
+      <div class="actions"><button id="save-farm-btn">Simpan catatan</button><button id="refresh-farm-btn" class="secondary">Muat ulang</button></div>
+      <p id="farm-message" class="message" aria-live="polite"></p>
+      <div id="farm-list" class="result muted">Masuk untuk melihat catatan lahan.</div>
+    </section>
+
+    <footer>
+      <p>AgroSmart – prototipe integrasi awal. Informasi cuaca bersumber dari BMKG; harga pasar mengikuti data yang dimasukkan admin.</p>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
