@@ -166,6 +166,55 @@ updateSession();
 
 let priceHistoryChart = null;
 
+async function loadCommodityOptions() {
+  const select = $("history-commodity");
+
+  try {
+    requireConfig();
+
+    const { data, error } = await supabase
+      .from("market_price_history")
+      .select("commodity")
+      .eq("region", "Jawa Barat")
+      .order("commodity");
+
+    if (error) throw error;
+
+    const commodities = [
+      ...new Set(
+        (data || [])
+          .map(item => item.commodity)
+          .filter(Boolean)
+      )
+    ];
+
+    if (commodities.length === 0) {
+      select.innerHTML =
+        '<option value="">Belum ada komoditas</option>';
+      return;
+    }
+
+    select.innerHTML = commodities
+      .map(commodity => {
+        const option = document.createElement("option");
+        option.value = commodity;
+        option.textContent = commodity;
+        return option;
+      })
+      .reduce((fragment, option) => {
+        fragment.appendChild(option);
+        return fragment;
+      }, document.createDocumentFragment());
+
+    await loadPriceHistory();
+
+  } catch (error) {
+    console.error("Gagal memuat komoditas:", error);
+
+    select.innerHTML =
+      '<option value="">Gagal memuat komoditas</option>';
+  }
+}
 async function loadPriceHistory() {
   const result = $("price-history-result");
   const canvas = $("price-history-chart");
@@ -275,4 +324,4 @@ async function loadPriceHistory() {
 $("history-commodity").addEventListener("change", loadPriceHistory);
 $("history-period").addEventListener("change", loadPriceHistory);
 
-loadPriceHistory();
+loadCommodityOptions();
